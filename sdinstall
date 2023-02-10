@@ -2,7 +2,7 @@
 
 # Apps Installation
 
-echo "Steeve Dumais"
+echo "dmalaw debian install"
 
 
 apt update && apt upgrade -y
