@@ -9,7 +9,7 @@ apt update && apt upgrade -y
 
 # MES APPS
 
-apt -y install kde-plasma-desktop plasma-nm neofetch htop remmina vim thunar kitty gedit bleachbit ufw gufw ark kate kcalc kde-spectacle okular clementine gimp qbittorrent vlc celluloid timeshift samba smbclient cifs-utils curl latte-dock build-essential dkms linux-headers-$(uname -r) ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi fonts-crosextra-carlito fonts-crosextra-caladea
+apt -y install unzip kde-plasma-desktop plasma-nm neofetch htop remmina vim thunar kitty gedit bleachbit ufw gufw ark kate kcalc kde-spectacle okular clementine gimp qbittorrent vlc celluloid timeshift samba smbclient cifs-utils curl latte-dock build-essential dkms linux-headers-$(uname -r) ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi fonts-crosextra-carlito fonts-crosextra-caladea
 
 
 
