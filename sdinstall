@@ -5,43 +5,43 @@
 echo "dmalaw debian install"
 
 
-apt update && apt upgrade -y
+sudo apt update && apt upgrade -y
 
 # MES APPS
 
-apt -y install unzip kde-plasma-desktop plasma-nm neofetch htop remmina vim thunar kitty gedit bleachbit ufw gufw ark kate kcalc kde-spectacle okular clementine gimp qbittorrent vlc celluloid timeshift samba smbclient cifs-utils curl latte-dock build-essential dkms linux-headers-$(uname -r) ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi fonts-crosextra-carlito fonts-crosextra-caladea
+sudo apt -y install unzip kde-plasma-desktop plasma-nm neofetch htop remmina vim thunar kitty gedit bleachbit ufw gufw ark kate kcalc kde-spectacle okular clementine gimp qbittorrent vlc celluloid timeshift samba smbclient cifs-utils curl latte-dock build-essential dkms linux-headers-$(uname -r) ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi fonts-crosextra-carlito fonts-crosextra-caladea
 
 
 
 # VIRTUALBOX
 
-wget -O- -q https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmour -o /usr/share/keyrings/oracle_vbox_2016.gpg
+sudo wget -O- -q https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmour -o /usr/share/keyrings/oracle_vbox_2016.gpg
 
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 
-apt update
+sudo apt update
 
-wget https://download.virtualbox.org/virtualbox/7.0.6/Oracle_VM_VirtualBox_Extension_Pack-7.0.6.vbox-extpack
+sudo wget https://download.virtualbox.org/virtualbox/7.0.6/Oracle_VM_VirtualBox_Extension_Pack-7.0.6.vbox-extpack
 
 sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.6.vbox-extpack
 
-usermod -a -G vboxusers $USER
-groups $USER
+sudo usermod -a -G vboxusers $USER
+sudo groups $USER
 
 
 
 # ENABLE FIREWALL
 
-ufw enable
+sudo ufw enable
 
 
 
 # BRAVE BROWSER
 
-curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-apt update
+sudo apt update
 
-apt install brave-browser
+sudo apt install brave-browser
